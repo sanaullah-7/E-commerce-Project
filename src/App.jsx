@@ -1,44 +1,48 @@
 import React from "react";
-import Navbar from "./components/Navbar/Navbar";
-import Hero from "./components/Hero/Hero";
-import Products from "./components/Products/Products";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import TopProducts from "./components/TopProducts/TopProducts";
-import Banner from "./components/Banner/Banner";
-import Subscribe from "./components/Subscribe/Subscribe";
-import Testimonials from "./components/Testimonials/Testimonials";
-import Footer from "./components/Footer/Footer";
-import Popup from "./components/Popup/Popup";
+import Home from "./Pages/Home"
+import Kids from "./Component/KidsComponents/kid";
+import Men from "./Component/MenComponents/Men";
+import Women from "./Component/WomenComponents/Women";
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Navbar from "./Component/HomeComponents/Navbar/Nvabr";
 
 const App = () => {
-  const [orderPopup, setOrderPopup] = React.useState(false);
+  const [orderPopup, SetOrderPopup] = React.useState(false);
 
   const handleOrderPopup = () => {
-    setOrderPopup(!orderPopup);
+    SetOrderPopup(!orderPopup);
   };
   React.useEffect(() => {
     AOS.init({
       offset: 100,
-      duration: 800,
-      easing: "ease-in-sine",
+      duration: 900,
+      easing: "ease-in-shine ",
       delay: 100,
     });
     AOS.refresh();
   }, []);
 
   return (
-    <div className="bg-white dark:bg-gray-900 dark:text-white duration-200">
-      <Navbar handleOrderPopup={handleOrderPopup} />
-      <Hero handleOrderPopup={handleOrderPopup} />
-      <Products />
-      <TopProducts handleOrderPopup={handleOrderPopup} />
-      <Banner />
-      <Subscribe />
-      <Testimonials />
-      <Footer />
-      <Popup orderPopup={orderPopup} setOrderPopup={setOrderPopup} />
-    </div>
+    <>
+      <div className="dark:bg-[#101429] bg-white text-black dark:text-white duration-500">
+
+        <BrowserRouter>
+          <Navbar handleOrderPopup={handleOrderPopup} />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/mens" element={<Men />} />
+            <Route path="/womens" element={<Women />} />
+            <Route path="/kids" element={<Kids />} />
+          </Routes>
+        </BrowserRouter>
+
+      </div>
+
+
+
+    </>
   );
 };
 
