@@ -6,7 +6,8 @@ import Kids from "./Component/KidsComponents/kid";
 import Men from "./Component/MenComponents/Men";
 import Women from "./Component/WomenComponents/Women";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Navbar from "./Component/HomeComponents/Navbar/Nvabr";
+import Navbar from "./Component/HomeComponents/Navbar/Nvabr";;
+import Footing from "./Component/HomeComponents/Navbar/Footing";
 
 const App = () => {
   const [orderPopup, SetOrderPopup] = React.useState(false);
@@ -36,6 +37,7 @@ const App = () => {
             <Route path="/womens" element={<Women />} />
             <Route path="/kids" element={<Kids />} />
           </Routes>
+          <Footing />
         </BrowserRouter>
 
       </div>

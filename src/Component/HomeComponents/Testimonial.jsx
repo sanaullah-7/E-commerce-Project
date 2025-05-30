@@ -111,7 +111,7 @@ function Testimonial() {
         <><div className=" container px-8 py-8 mb-16">
 
             <div data-aos="fade-up" className='m-16 flex flex-col items-center font-sans  sm:font-bold text-xl '>
-                <h1 className='bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent ' >What our customers are saying
+                <h1 className='bg-gradient-to-r from-[orange] to-[red] bg-clip-text text-transparent w-[14em] sm:w-full text-center' >What our customers are saying
 
                 </h1>
                 <h2 className='text-3xl md:text-4xl font-bold '>Testimonials</h2>
