@@ -54,7 +54,7 @@ function TopProducts({ handleOrderPopup }) {
                 </div>
             </div>
 
-            <div className='mx-28 sm:mx-12 lg:mx-36 gap-y-24 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 sm:gap-8  md:gap-20 place-items-center '>
+            <div className='mx-28 sm:mx-12 lg:gap-x-60 lg:mx-32 gap-y-24 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 sm:gap-8  md:gap-20 place-items-center '>
 
                 {ProductData.map((item) => (
                     <div data-aos="zoom-in" data-aos-duration="900" className='w-[15rem] lg:w-[20rem] p-3 mt-28  justify-center items-center place-items-center shadow-xl shadow-[#d6cece] gap-10 rounded-2xl hover:bg-black hover:text-white group hover:bg-gradient-to-r from-primary to-secondary dark:bg-[#423434] dark:hover:bg-primary/40 dark:shadow-black '>

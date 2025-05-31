@@ -59,9 +59,9 @@ function Nvabr({ handleOrderPopup }) {
                 <div className='sm:hidden   z-10 h-full fixed w-1/2  shadow-2xl backdrop-blur-none p-5 font-bold bg-gradient-to-r from-primary/90 to-secondary/80 dark:bg-[#080808]  '>
                     <div className=' grid mt-12 gap-y-8'>
                         <Link onClick={HandleToggle} className={` ${Location.pathname === "/" ? "      border-b-2 border-blue-500 text-blue-600 " : ""}`} to={"/"}>Home</Link>
-                        <Link className={` ${Location.pathname === "/kids" ? "  border-b-2 border-blue-500 text-blue-600" : ""}`} to={"/kids"}>Kids </Link>
                         <Link className={` ${Location.pathname === "/mens" ? "  border-b-2 border-blue-500 text-blue-600" : ""}`} to={"/mens"}>Mens </Link>
                         <Link className={` ${Location.pathname === "/womens" ? "border-b-2 border-blue-500 text-blue-600" : ""}`} to="/womens" >Women </Link>
+                        <Link className={` ${Location.pathname === "/kids" ? "  border-b-2 border-blue-500 text-blue-600" : ""}`} to={"/kids"}>Kids </Link>
                     </div>
                     <div className='flex justify-between gap-4 items-center mt-5'>
                         <div className='flex'>

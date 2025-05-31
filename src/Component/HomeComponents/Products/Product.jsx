@@ -77,7 +77,7 @@ function Product() {
                 <h2 className='text-3xl sm:text-5xl '>Products</h2>
                 <p className='font-normal text-sm line-1 flex text-center '>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit asperiores modi Sit asperiores modi</p>
             </div>
-            <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 place-items-center   '>
+            <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 place-items-center lg:gap-x-5 lg:mx-10 '>
 
                 {ProductData.map((item) => (
                     <div className='bg-white dark:bg-gradient-to-r from-primary to-secondary hover:shadow-2xl hover:shadow-[#584f4f] p-3 rounded-lg hover:scale-150 mt-20 cursor-pointer '
