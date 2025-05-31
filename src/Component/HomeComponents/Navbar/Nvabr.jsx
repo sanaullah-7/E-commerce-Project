@@ -6,6 +6,7 @@ import DarkMode from './DarkMode';
 import { Link, useLocation } from 'react-router-dom';
 import { SlOptionsVertical } from "react-icons/sl";
 import { IoMdClose } from "react-icons/io"; // Import close icon
+import Logo from "../../../assets/logo_big.png"
 
 function Nvabr({ handleOrderPopup }) {
     const [Open, SetOpen] = useState(false);
@@ -19,12 +20,12 @@ function Nvabr({ handleOrderPopup }) {
         <>
             {/* Large Screen Navbar */}
             <div className='hidden sm:flex items-center justify-between w-full fixed z-10 shadow-2xl backdrop-blur-none p-5 font-bold bg-gradient-to-r from-primary/40 to-secondary/40 dark:bg-[#080808]'>
-                <h1 className='text-2xl lg:mx-10 flex items-center gap-2'><FiShoppingBag />ShopMe</h1>
+                <h1 className='text-2xl lg:mx-10 flex items-center '><img className='h-12 -mt-2' src={Logo} alt="" />ShopMe</h1>
                 <div className='flex sm:gap-5 lg:gap-10'>
                     <Link className={`hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-[orange] hover:to-[red]${Location.pathname === "/" ? " border-b-2 border-blue-500 text-blue-500 " : ""}`} to={"/"}>Home</Link>
-                    <Link className={`hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-[orange] hover:to-[red] ${Location.pathname === "/kids" ? "border-b-2 border-blue-500 text-blue-500" : ""}`} to={"/kids"}>Kids </Link>
                     <Link className={`hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-[orange] hover:to-[red] ${Location.pathname === "/mens" ? "border-b-2 border-blue-500 text-blue-500" : ""}`} to={"/mens"}>Mens </Link>
                     <Link className={`hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-[orange] hover:to-[red] ${Location.pathname === "/womens" ? "border-b-2 border-blue-500 text-blue-500" : ""}`} to="/womens" >Women </Link>
+                    <Link className={`hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-[orange] hover:to-[red] ${Location.pathname === "/kids" ? "border-b-2 border-blue-500 text-blue-500" : ""}`} to={"/kids"}>Kids </Link>
                 </div>
 
                 <div className='flex sm:gap-8 md:gap-2 lg:gap-4'>
@@ -47,7 +48,7 @@ function Nvabr({ handleOrderPopup }) {
 
             {/* Small Screen Navbar */}
             <div className='sm:hidden flex items-center justify-between w-full fixed z-10 shadow-2xl backdrop-blur-none p-5 font-bold bg-gradient-to-r from-primary/70 to-secondary/70 dark:bg-[#080808]'>
-                <h1 className='text-2xl flex items-center gap-2'><FiShoppingBag />ShopMe</h1>
+                <h1 className='text-2xl flex items-center gap-1'><img className='h-12 -mt-2' src={Logo} alt="" />ShopMe</h1>
                 <div onClick={HandleToggle} className='cursor-pointer text-2xl'>
                     {Open ? <IoMdClose /> : <SlOptionsVertical />}
                 </div>

@@ -8,6 +8,7 @@ import Women from "./Component/WomenComponents/Women";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navbar from "./Component/HomeComponents/Navbar/Nvabr";;
 import Footing from "./Component/HomeComponents/Navbar/Footing";
+import Product from "./Pages/Product";
 
 const App = () => {
   const [orderPopup, SetOrderPopup] = React.useState(false);
@@ -36,6 +37,7 @@ const App = () => {
             <Route path="/mens" element={<Men />} />
             <Route path="/womens" element={<Women />} />
             <Route path="/kids" element={<Kids />} />
+            <Route path="/product/:id" element={<Product />} />
           </Routes>
           <Footing />
         </BrowserRouter>

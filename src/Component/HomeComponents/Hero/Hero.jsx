@@ -1,7 +1,8 @@
 import React from 'react'
 import image1 from "./assets/sale.png"
 import image2 from "./assets/shopping.png"
-import image3 from "./assets/women.png"
+import image3 from "./assets/product_28.png"
+import image4 from "./assets/women.png"
 import Slider from 'react-slick'
 
 const data = [
@@ -21,7 +22,7 @@ const data = [
         description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam hic dolore quisquam, minima eveniet culpa. Eligendi quo illum voluptas explicabo autem  consectet quia?"
     },
     {
-        img: image3,
+        img: image4,
         title: "80% off on all Products Wear",
         description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam hic dolore quisquam, minima eveniet culpa. Eligendi quo illum voluptas explicabo autem consequuntur suscipit quaerat  consectet quia?"
     },
@@ -43,7 +44,7 @@ function Hero({ handleOrderPopup }) {
     return (
         <div className="relative overflow-hidden  min-h-[650px]    sm:min-h-screen bg-gray-100 flex justify-center items-center dark:bg-slate-900  duration-500  ">
             {/* background pattern */}
-            <div className="h-[780px] w-[700px] bg-gradient-to-r from-primary to-secondary dark:bg-primary/70 absolute -top-1/2 right-0 rounded-3xl rotate-45 "></div>
+            <div className="h-[780px] w-[700px] bg-gradient-to-r from-primary to-secondary  absolute -top-1/2 right-0 rounded-3xl rotate-45 "></div>
             <div className='container pb-8 sm:pb-0'>
                 <Slider {...settings}>
                     {data.map((item) => (

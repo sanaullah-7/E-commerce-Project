@@ -3,6 +3,8 @@ import { FaMapLocationDot } from "react-icons/fa6";
 import { FaFacebook, FaInstagram, FaLinkedin, } from "react-icons/fa";
 import { IoCall } from "react-icons/io5";
 import { Link } from "react-router-dom"
+import Logo from "../../../assets/logo_big.png"
+
 
 export default function Footeer() {
     return (
@@ -11,7 +13,11 @@ export default function Footeer() {
                 <main className="  dark:bg-[#0c0303] text-white mt-16 md:px-10 lg:px-20 bg-[#333c64] ">
                     <div data-aos="zoom-in" className="flex flex-col items-center sm:flex sm:flex-row justify-between p-5  md:p-10">
                         <div >
-                            <h1 className="text-xl text-center sm:text-start font-sans font-bold">WEB LOGO</h1>
+                            <div className="flex items-center justify-center sm:-ml-20  text-xl text-center sm:text-start font-sans font-bold">
+
+                                <img className='h-12' src={Logo} alt="" />
+                                <h1>ShopMe</h1>
+                            </div>
                             <p className="w-52 text-sm mt-4 ml-16 sm:ml-0">Lorem ipsum dolor sit amet consectetur.
                                 Duis lorem purus ipsum sed id tortor
                                 vulputate iaculis. Aliquam bibendum dictu
