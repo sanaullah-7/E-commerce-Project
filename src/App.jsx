@@ -9,6 +9,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navbar from "./Component/HomeComponents/Navbar/Nvabr";;
 import Footing from "./Component/HomeComponents/Navbar/Footing";
 import Product from "./Pages/Product";
+import ScrollTop from "./Pages/ScrollTop";
 
 const App = () => {
   const [orderPopup, SetOrderPopup] = React.useState(false);
@@ -31,6 +32,7 @@ const App = () => {
       <div className="dark:bg-[#101429] bg-white text-black dark:text-white duration-500">
 
         <BrowserRouter>
+          <ScrollTop />
           <Navbar handleOrderPopup={handleOrderPopup} />
           <Routes>
             <Route path="/" element={<Home />} />
