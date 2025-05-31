@@ -80,7 +80,7 @@ function Product() {
             <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 place-items-center lg:gap-x-5 lg:mx-10 '>
 
                 {ProductData.map((item) => (
-                    <div className='bg-white dark:bg-gradient-to-r from-primary to-secondary hover:shadow-2xl hover:shadow-[#584f4f] p-3 rounded-lg hover:scale-150 mt-20 cursor-pointer '
+                    <div className='bg-white dark:bg-gradient-to-r from-primary to-secondary shadow-lg shadow-slate-400 dark:shadow-none hover:shadow-2xl hover:shadow-[#584f4f] p-3 rounded-lg hover:scale-150 mt-20 cursor-pointer '
                         data-aos="fade-up"
                         data-aos-delay={item.aosDelay}>
 

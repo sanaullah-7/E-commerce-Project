@@ -13,7 +13,7 @@ function NewCollection() {
             <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4  gap-x-5  '>
 
                 {new_collections.map((item) => (
-                    <div className='bg-white hover:dark:bg-gradient-to-r text-black  from-primary to-secondary hover:shadow-2xl hover:shadow-[#584f4f] mx-16 sm:mx-0 p-3 flex flex-col items-center rounded-lg hover:scale-150 mt-10  sm:mt-20 cursor-pointer '
+                    <div className='bg-white hover:dark:bg-gradient-to-r text-black  from-primary to-secondary shadow-lg shadow-slate-400 dark:shadow-none  hover:shadow-2xl hover:shadow-[#584f4f] mx-16 sm:mx-0 p-3 flex flex-col items-center rounded-lg hover:scale-150 mt-10  sm:mt-20 cursor-pointer '
                         data-aos="zoom-in"
                         data-aos-delay="500">
 
