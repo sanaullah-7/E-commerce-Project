@@ -15,10 +15,10 @@ export default function Footeer() {
                         <div >
                             <div className="flex items-center justify-center sm:-ml-20  text-xl text-center sm:text-start font-sans font-bold">
 
-                                <img className='h-12' src={Logo} alt="" />
-                                <h1>ShopMe</h1>
+                                <img className='h-9 ml-2 sm:ml-0' src={Logo} alt="" />
+                                <h1 className="ml-1">ShopMe</h1>
                             </div>
-                            <p className="w-52 text-sm mt-4 ml-16 sm:ml-0">Lorem ipsum dolor sit amet consectetur.
+                            <p className="w-64 sm:w-52 text-sm mt-4 ml-10 sm:ml-0 line-clamp-2 sm:line-clamp-none ">Lorem ipsum dolor sit amet consectetur.
                                 Duis lorem purus ipsum sed id tortor
                                 vulputate iaculis. Aliquam bibendum dictu
                                 felis aenean nisl duis.</p>

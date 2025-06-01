@@ -1,7 +1,7 @@
 import React from 'react'
 import image1 from "./assets/sale.png"
 import image2 from "./assets/shopping.png"
-import image3 from "./assets/product_28.png"
+import image3 from "./assets/hero_image.png"
 import image4 from "./assets/women.png"
 import Slider from 'react-slick'
 
@@ -12,12 +12,12 @@ const data = [
         description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam hic dolore quisquam, minima eveniet culpa. Eligendi quo illum voluptas explicabo autem consequuntur suscipit quaerat  consectet quia?"
     },
     {
-        img: image2,
+        img: image3,
         title: "Upto 50% off on all Women's Wear",
         description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam hic dolore quisquam, minima eveniet culpa. Eligendi quo  quaerat  consectet quia?"
     },
     {
-        img: image3,
+        img: image2,
         title: "Upto 60% off on all Kid's Wear",
         description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam hic dolore quisquam, minima eveniet culpa. Eligendi quo illum voluptas explicabo autem  consectet quia?"
     },
@@ -78,7 +78,7 @@ function Hero({ handleOrderPopup }) {
                                     <div className='relative z-10'
                                         data-aos="zoom-in"
                                         data-aos-once="true">
-                                        <img src={item.img} alt="" className='h-[300px] w-[300px] sm:h-[450px] sm:[450px] sm:scale-105 lg:scale-150 object-contain mx-auto' />
+                                        <img src={item.img} alt="" className='h-[300px] w-[300px] mt-16 sm:h-[400px] sm:[450px] sm:scale-105 lg:scale-150 object-contain mx-auto' />
                                     </div>
                                 </div>
 
