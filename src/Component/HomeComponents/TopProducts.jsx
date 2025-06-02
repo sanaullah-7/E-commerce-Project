@@ -2,28 +2,18 @@ import React from 'react'
 import image1 from "../../assets/shirt/shirt.png"
 import image2 from "../../assets/shirt/shirt2.png"
 import image3 from "../../assets/shirt/shirt3.png"
+import image4 from "../../assets/shirt/image4.png"
+import image5 from "../../assets/shirt/image5.png"
 import { FaS, FaStar } from 'react-icons/fa6'
 
 const ProductData = [
     {
-        img: image1,
+        img: image4,
         title: "Casual Wear",
         description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum atque nulla sed, consequuntur ...",
         Button: "Order"
     },
     {
-        img: image2,
-        title: "Printed Shirt",
-        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum atque nulla sed, consequuntur ...",
-        Button: "Order"
-    },
-    {
-        img: image3,
-        title: "Woemen Shirt",
-        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum atque nulla sed, consequuntur ...",
-        Button: "Order"
-    },
-    {
         img: image1,
         title: "Printed Shirt",
         description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum atque nulla sed, consequuntur ...",
@@ -31,12 +21,24 @@ const ProductData = [
     },
     {
         img: image2,
+        title: "Woemen Shirt",
+        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum atque nulla sed, consequuntur ...",
+        Button: "Order"
+    },
+    {
+        img: image3,
+        title: "Printed Shirt",
+        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum atque nulla sed, consequuntur ...",
+        Button: "Order"
+    },
+    {
+        img: image5,
         title: "Printed Shirt",
         description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum atque nulla sed, consequuntur ...",
         Button: "Order",
     },
     {
-        img: image3,
+        img: image4,
         title: "Printed Shirt",
         description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum atque nulla sed, consequuntur ...",
         Button: "Order"

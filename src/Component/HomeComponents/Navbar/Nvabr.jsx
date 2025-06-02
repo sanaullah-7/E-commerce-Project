@@ -77,7 +77,7 @@ function Nvabr({ handleOrderPopup }) {
                             <button onClick={() => handleOrderPopup()} className='flex font-semibold bg-gradient-to-r from-primary to-secondary rounded-full py-1 px-4 gap-4 text-white group shadow-inner shadow-[#312b2b] '>
                                 <FaCartShopping className='text-3xl ' />
                             </button>
-                            <div className="cursor-pointer w-5 h-5 sm:w-[22px] sm:h-[22px] flex justify-center items-center relative z-10 rounded-full -ml-6 -mt-1  bg-[red] text-white text-sm sm:text-lg">0</div>
+                            <div className="cursor-pointer w-5 h-5 sm:w-[22px] sm:h-[22px] flex justify-center items-center relative z-10 rounded-full -ml-6 -mt-1  bg-[red] text-white text-sm sm:text-lg">{totalCartItems}</div>
                         </div>
                         <DarkMode />
 
