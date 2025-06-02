@@ -81,8 +81,9 @@ function Nvabr({ handleOrderPopup }) {
                                 <div className="cursor-pointer w-5 h-5 sm:w-[22px] sm:h-[22px] flex justify-center items-center relative z-10 rounded-full -ml-6 -mt-1  bg-[red] text-white text-sm sm:text-lg">{totalCartItems}</div>
                             </div>
                         </Link>
-
-                        <DarkMode />
+                        <div>
+                            <DarkMode />
+                        </div>
 
                     </div>
 
