@@ -7,6 +7,11 @@ import { Link, useLocation } from 'react-router-dom';
 import { SlOptionsVertical } from "react-icons/sl";
 import { IoMdClose } from "react-icons/io"; // Import close icon
 import Logo from "../../../assets/logo_big.png"
+import { useContext } from 'react';
+import { ShopContextData } from '../../../Pages/ShopContext';
+
+
+
 
 function Nvabr({ handleOrderPopup }) {
     const [Open, SetOpen] = useState(false);
@@ -15,7 +20,8 @@ function Nvabr({ handleOrderPopup }) {
     function HandleToggle() {
         SetOpen(!Open);
     }
-
+    const { cartItem } = useContext(ShopContextData);
+    const totalCartItems = Object.values(cartItem).reduce((total, count) => total + count, 0);
     return (
         <>
             {/* Large Screen Navbar */}
@@ -34,12 +40,15 @@ function Nvabr({ handleOrderPopup }) {
                         <IoMdSearch className='absolute right-2 top-2 text-lg dark:text-[black] text-white' />
                     </div>
 
-                    <div>
-                        <button onClick={() => handleOrderPopup()} className='flex font-semibold bg-gradient-to-r from-primary to-secondary rounded-full py-1 px-4 gap-4 text-white group shadow-inner shadow-[#312b2b] '>
-                            <FaCartShopping className='text-3xl ' />
-                        </button>
-                        <div className="cursor-pointer w-[22px] h-[22px] flex justify-center items-center -mt-[45px] ml-10 relative z-10 rounded-full bg-[red] text-white ">0</div>
-                    </div>
+                    <Link to={"/cart"}>
+                        <div>
+                            <button onClick={() => handleOrderPopup()} className='flex font-semibold bg-gradient-to-r from-primary to-secondary rounded-full py-1 px-4 gap-4 text-white group shadow-inner shadow-[#312b2b] '>
+                                <FaCartShopping className='text-3xl ' />
+                            </button>
+                            <div className="cursor-pointer w-[22px] h-[22px] flex justify-center items-center -mt-[45px] ml-10 relative z-10 rounded-full bg-[red] text-white ">{totalCartItems}</div>
+
+                        </div>
+                    </Link>
                     <div className='items-center flex'>
                         <DarkMode />
                     </div>

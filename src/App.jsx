@@ -10,6 +10,8 @@ import Navbar from "./Component/HomeComponents/Navbar/Nvabr";;
 import Footing from "./Component/HomeComponents/Navbar/Footing";
 import Product from "./Pages/Product";
 import ScrollTop from "./Pages/ScrollTop";
+import ShopContext from "./Pages/ShopContext";
+import Cart from "./Component/HomeComponents/Navbar/Cart"
 
 const App = () => {
   const [orderPopup, SetOrderPopup] = React.useState(false);
@@ -29,22 +31,25 @@ const App = () => {
 
   return (
     <>
-      <div className="dark:bg-[#101429] bg-white text-black dark:text-white duration-500">
+      <ShopContext>
+        <div className="dark:bg-[#101429] bg-white text-black dark:text-white duration-500">
 
-        <BrowserRouter>
-          <ScrollTop />
-          <Navbar handleOrderPopup={handleOrderPopup} />
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/mens" element={<Men />} />
-            <Route path="/womens" element={<Women />} />
-            <Route path="/kids" element={<Kids />} />
-            <Route path="/product/:id" element={<Product />} />
-          </Routes>
-          <Footing />
-        </BrowserRouter>
+          <BrowserRouter>
+            <ScrollTop />
+            <Navbar handleOrderPopup={handleOrderPopup} />
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/mens" element={<Men />} />
+              <Route path="/womens" element={<Women />} />
+              <Route path="/kids" element={<Kids />} />
+              <Route path="/product/:id" element={<Product />} />
+              <Route path="/cart" element={<Cart />} />
+            </Routes>
+            <Footing />
+          </BrowserRouter>
 
-      </div>
+        </div>
+      </ShopContext>
 
 
 

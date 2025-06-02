@@ -1,8 +1,10 @@
-import React from 'react'
-import { useParams } from 'react-router-dom'
-import all_product from '../../Ecommerce_Frontend_Assets (1)/Assets/all_product'
-import arrow_icon from "../assets/breadcrum_arrow.png"
-import star_icon from "../assets/star_icon.png"
+import React, { useContext } from 'react';
+import { useParams } from 'react-router-dom';
+import all_product from '../../Ecommerce_Frontend_Assets (1)/Assets/all_product';
+import { ShopContextData } from '../Pages/ShopContext';  // adjust the import path accordingly
+import arrow_icon from "../assets/breadcrum_arrow.png";
+import star_icon from "../assets/star_icon.png";
+
 
 
 
@@ -12,6 +14,7 @@ function Product() {
     //✅ Tum URL ke hisaab se data fetch kar sakte ho.
     //✅ Har dynamic page (jaise product page) ko alag data ke sath dikha sakte ho.
     //✅ Har route ko manually define nahi karna padta.
+    const { AddToCart } = useContext(ShopContextData);
 
 
     const specficData = all_product.find((user) => user.id === +Unique.id)
@@ -73,7 +76,7 @@ function Product() {
                                 <h1 className='border-2 py-1 px-4 text-lg hover:bg-gray-200 dark:hover:text-black cursor-pointer'>XXL</h1>
                             </div>
                         </div>
-                        <button className='mt-5 p-2 font-bold w-full rounded-lg bg-gradient-to-r from-primary hover:bg-orange-800  to-secondary'>ADD TO CART</button>
+                        <button onClick={() => AddToCart(specficData.id)} className='mt-5 p-2 font-bold w-full rounded-lg bg-gradient-to-r from-primary hover:bg-orange-800  to-secondary'>ADD TO CART</button>
                         <div className='mt-4 text-gray-600 text-sm'>
                             <p><span className='font-semibold'>Category : </span>{specficData.category}</p>
                             <p><span className='font-semibold'>Tags : </span>Modern , Latest</p>
