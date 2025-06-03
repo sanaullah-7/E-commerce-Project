@@ -20,8 +20,13 @@ function Nvabr({ handleOrderPopup }) {
     function HandleToggle() {
         SetOpen(!Open);
     }
+    //Ye React ka useContext hook use karke ShopContextData ke andar se cartItem value ko le raha hai.
+    // cartItem ye object hai, jismein:product k keys ha aur product ke value { 0: 1, 1: 0, 2: 3, ...}
+
     const { cartItem } = useContext(ShopContextData);
+    // Object.values(cartItem):cartItem object ki values (quantities) ka array banata hai:
     const totalCartItems = Object.values(cartItem).reduce((total, count) => total + count, 0);
+    //.reduce()Ye array ke sabhi numbers ko add karta hai.
     return (
         <>
             {/* Large Screen Navbar */}
@@ -45,7 +50,7 @@ function Nvabr({ handleOrderPopup }) {
                             <button onClick={() => handleOrderPopup()} className='flex font-semibold bg-gradient-to-r from-primary to-secondary rounded-full py-1 px-4 gap-4 text-white group shadow-inner shadow-[#312b2b] '>
                                 <FaCartShopping className='text-3xl ' />
                             </button>
-                            <div className="cursor-pointer w-[22px] h-[22px] flex justify-center items-center -mt-[45px] ml-10 relative z-10 rounded-full bg-[red] text-white ">{totalCartItems}</div>
+                            <div className="cursor-pointer w-[22px] h-[22px] flex justify-center items-center -mt-[45px] ml-10 relative z-10 rounded-full bg-[red] text-white ">{totalCartItems}</div>{/* Yahan pe ye number dikhaoge – kitne total items cart mein hain. */}
 
                         </div>
                     </Link>

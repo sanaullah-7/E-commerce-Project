@@ -12,6 +12,7 @@ import Product from "./Pages/Product";
 import ScrollTop from "./Pages/ScrollTop";
 import ShopContext from "./Pages/ShopContext";
 import Cart from "./Component/HomeComponents/Navbar/Cart"
+// import Checkout from "./Component/HomeComponents/Navbar/checkout"
 
 const App = () => {
   const [orderPopup, SetOrderPopup] = React.useState(false);
@@ -44,6 +45,8 @@ const App = () => {
               <Route path="/kids" element={<Kids />} />
               <Route path="/product/:id" element={<Product />} />
               <Route path="/cart" element={<Cart />} />
+              {/* <Route path="/checkout" element={<Checkout />} /> */}
+
             </Routes>
             <Footing />
           </BrowserRouter>
